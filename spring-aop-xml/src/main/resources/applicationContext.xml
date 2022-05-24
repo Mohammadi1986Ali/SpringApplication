@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:aop="http://www.springframework.org/schema/aop"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+       http://www.springframework.org/schema/beans/spring-beans.xsd
+       http://www.springframework.org/schema/aop
+       http://www.springframework.org/schema/aop/spring-aop.xsd">
+
+    <bean name="customerService" class="com.javalab.tutorial.service.CustomerServiceImpl"/>
+    <bean name="aspectService" class="com.javalab.tutorial.aspect.AspectService"/>
+
+    <aop:config proxy-target-class="true">
+        <aop:aspect id="aspect" ref="aspectService">
+            <aop:pointcut id="serviceCall"
+                          expression="execution(* com.javalab.tutorial.service.CustomerServiceImpl+.*(..))"/>
+            <aop:before method="beforeService" pointcut-ref="serviceCall"></aop:before>
+            <aop:after method="afterService" pointcut-ref="serviceCall"></aop:after>
+        </aop:aspect>
+    </aop:config>
+</beans>
