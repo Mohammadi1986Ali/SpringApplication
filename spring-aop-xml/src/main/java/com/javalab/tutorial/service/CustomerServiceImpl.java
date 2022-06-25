@@ -6,7 +6,7 @@ import org.slf4j.LoggerFactory;
 
 public class CustomerServiceImpl implements CustomerService {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(CustomerServiceImpl.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(CustomerServiceImpl.class);
 
     public CustomerServiceImpl() {
         LOGGER.info("CustomerServiceImpl#CustomerServiceImpl");

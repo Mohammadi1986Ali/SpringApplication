@@ -4,7 +4,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class AspectService {
-    private static Logger LOGGER = LoggerFactory.getLogger(AspectService.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(AspectService.class);
 
     public void beforeService() {
         LOGGER.info("AspectService#beforeService");

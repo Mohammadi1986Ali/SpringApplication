@@ -11,7 +11,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class AspectService {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(AspectService.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(AspectService.class);
 
     @Before("execution(* com.javalab.tutorial.service.CustomerServiceImpl+.*(..))")
     public void beforeService() {

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Component;
 @Component
 public class CustomerServiceImpl implements CustomerService {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(CustomerServiceImpl.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(CustomerServiceImpl.class);
 
     @Override
     public void findAllCustomer() {

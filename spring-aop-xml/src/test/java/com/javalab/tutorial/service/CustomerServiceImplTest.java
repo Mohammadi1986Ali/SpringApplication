@@ -9,7 +9,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 
 class CustomerServiceImplTest {
 
-    private static Logger LOGGER = LoggerFactory.getLogger(CustomerServiceImplTest.class);
+    private static final Logger LOGGER = LoggerFactory.getLogger(CustomerServiceImplTest.class);
     static ApplicationContext context;
 
     @BeforeAll
